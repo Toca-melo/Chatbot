@@ -28,7 +28,7 @@
 
 # 📦 Estructura del Proyecto
 
-```plaintext
+```
     gamezone-bot/
     ├── corpus/
     │   └── corpus.js          # Preguntas y respuestas organizadas
