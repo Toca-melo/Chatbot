@@ -1,58 +1,32 @@
-# 🤖 GameZone Bot - Asistente Virtual para WhatsApp
+# 🎮 Chatbot Comercial con PLN: GameZoneBot
 
-Bienvenido a **GameZone Bot**, un asistente virtual desarrollado con Node.js que se conecta a WhatsApp Web para responder preguntas frecuentes utilizando procesamiento de lenguaje natural (PLN).
+**GameZoneBot** es un asistente virtual inteligente para WhatsApp que automatiza la atención al cliente de la tienda de videojuegos **GameZone**. Utiliza técnicas de procesamiento de lenguaje natural (PLN) para responder preguntas frecuentes, sugerir videojuegos, brindar información de horarios y promociones, y mucho más.
 
----
-
-## 🧠 Descripción General
-
-GameZone Bot es un chatbot que responde automáticamente a mensajes de clientes utilizando una base de conocimientos (corpus). Usa técnicas simples de PLN para encontrar la respuesta más parecida a la pregunta enviada. Además, aprende de nuevas preguntas al registrarlas si no encuentra una respuesta adecuada.
+<img src="https://github.com/user-attachments/assets/59a7dc4c-9d6f-4b9f-b869-61e6d4841445" alt="gamezonebot" width="140"/>
 
 ---
 
-## 🧱 Arquitectura Físico-Técnica
+## 🌟 Características Principales
 
-### 📌 Componentes Principales
-
-| Componente | Descripción |
-|------------|-------------|
-| **WhatsApp Web** | Plataforma a la que se conecta el bot usando `whatsapp-web.js` para enviar y recibir mensajes. |
-| **Bot en Node.js** | Lógica principal del sistema: procesamiento de mensajes, similitud, respuestas y aprendizaje. |
-| **Corpus (`corpus.js`)** | Archivo con pares pregunta-respuesta para responder automáticamente. |
-| **Archivo de preguntas desconocidas (`desconocido.json`)** | Registra preguntas nuevas que no fueron respondidas. |
-| **Librería `natural`** | Utiliza la distancia Jaro-Winkler para medir similitud entre preguntas. |
-| **Imagen de bienvenida (`logo.png`)** | Imagen enviada a los usuarios al iniciar sesión. |
-| **Lista de números (`numeros.js`)** | Lista de contactos a los que se les envía un mensaje inicial. |
+- *Respuestas inteligentes* usando similitud semántica
+- *Reconocimiento de lenguaje natural* con Jaro-Winkler
+- *Organización modular* del corpus en temas
+- *Registro de preguntas desconocidas* para entrenamiento futuro
+- *Envío automático de imagen de bienvenida*
+- *Ejecutado con WhatsApp Web sin APIs externas*
 
 ---
 
-### 🖼️ Diagrama Lógico
+## 🔄 Flujo de Procesamiento
 
-```plaintext
-+---------------------------+
-|    Usuario en WhatsApp   |
-+-----------+---------------+
-            |
-            v
-+---------------------------+
-|     WhatsApp Web API      |  <-- (a través de whatsapp-web.js)
-+---------------------------+
-            |
-            v
-+---------------------------+
-|     Bot Node.js App       |
-|  - Procesamiento de msg   |
-|  - Comparación con corpus |
-|  - Lógica de respuestas   |
-+-----------+---------------+
-            |
-    +-------+-------+
-    |               |
-    v               v
-Corpus (JS)    desconocido.json
-(Preguntas)    (Aprendizaje pasivo)
+1. **Recepción de mensaje** desde WhatsApp vía `whatsapp-web.js`
+2. **Preprocesamiento** del texto: limpieza, minúsculas, acentos
+3. **Comparación semántica** con corpus usando Jaro-Winkler (umbral ≥ 0.74)
+4. **Clasificación de intención**: diálogo, información o juegos
+5. **Generación de respuesta** con mensajes personalizados
+6. **Persistencia de preguntas desconocidas** en archivo local
 
-           +--------------------+
-           |  Librería "natural"|
-           | (Jaro-Winkler)     |
-           +--------------------+
+---
+
+# 📦 Estructura del Proyecto
+
