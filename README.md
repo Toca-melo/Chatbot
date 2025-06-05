@@ -28,15 +28,17 @@
 
 # 📦 Estructura del Proyecto
 
-gamezone-bot/
-├── corpus/
-│ └── corpus.js # Preguntas y respuestas organizadas
-├── desconocido.json # Registro de preguntas no reconocidas
-├── logo.png # Imagen enviada como bienvenida
-├── numeros.js # Números autorizados
-├── index.js # Lógica principal del bot
-├── package.json # Dependencias y configuración del proyecto
-└── README.md # Documentación del proyecto
+```plaintext
+    gamezone-bot/
+    ├── corpus/
+    │   └── corpus.js          # Preguntas y respuestas organizadas
+    ├── desconocido.json       # Registro de preguntas no reconocidas
+    ├── logo.png               # Imagen enviada como bienvenida
+    ├── numeros.js             # Números autorizados
+    ├── index.js               # Lógica principal del bot
+    ├── package.json           # Dependencias y configuración del proyecto
+    └── README.md              # Documentación del proyecto
+```
 
 
 ---
