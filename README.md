@@ -2,8 +2,6 @@
 
 **GameZoneBot** es un asistente virtual inteligente para WhatsApp que automatiza la atención al cliente de la tienda de videojuegos **GameZone**. Utiliza técnicas de procesamiento de lenguaje natural (PLN) para responder preguntas frecuentes, sugerir videojuegos, brindar información de horarios y promociones, y mucho más.
 
-<img src="https://github.com/user-attachments/assets/59a7dc4c-9d6f-4b9f-b869-61e6d4841445" alt="gamezonebot" width="140"/>
-
 ---
 
 ## 🌟 Características Principales
@@ -68,4 +66,68 @@ flowchart TB
     BOT --> LOGS
     BOT --> WAPI
     WAPI --> Usuario
+```
+
+---
+
+#🚀 Instalación y Configuración
+
+-git clone https://github.com/tuusuario/gamezone-bot.git
+cd gamezone-bot
+
+-npm install
+
+-npm start
+
+## 🛠️ Dependencias Principales
+
+| Paquete            | Función                                     |
+|--------------------|---------------------------------------------|
+| `whatsapp-web.js`  | Conexión con WhatsApp Web                   |
+| `natural`          | Similitud de texto con Jaro-Winkler         |
+| `fs` / `fs-extra`  | Lectura y escritura de archivos locales     |
+| `qrcode-terminal`  | Muestra el QR en consola                    |
+
+---
+
+## 📌 Requisitos del Sistema
+
+- ✅ Node.js v16 o superior  
+- ✅ NPM v8 o superior  
+- ✅ WhatsApp activo en un teléfono móvil  
+- ✅ Navegador Chromium instalado  
+
+---
+
+## 💬 Ejemplos de preguntas reconocidas
+
+**🎧 Diálogo**
+- Hola
+- Gracias
+- Buenas tardes
+
+**🏬 Información**
+- ¿Dónde están ubicados?
+- ¿Tienen servicio de envío?
+- ¿Cuáles son los horarios?
+
+**🎮 Juegos**
+- ¿Qué videojuego me recomiendas?
+- ¿Tienen juegos de carreras?
+- ¿Venden videojuegos usados?
+
+---
+
+## 📚 Entrenamiento y Corpus
+
+El archivo `corpus.js` contiene más de **60 preguntas** categorizadas en:
+- Diálogo
+- Información
+- Videojuegos
+
+Además, las preguntas sin coincidencias se almacenan automáticamente en `desconocido.json` para analizarlas y enriquecer el corpus con nuevas entradas.
+
+---
+
+
 
