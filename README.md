@@ -30,3 +30,42 @@
 
 # 📦 Estructura del Proyecto
 
+gamezone-bot/
+├── corpus/
+│ └── corpus.js # Preguntas y respuestas organizadas
+├── desconocido.json # Registro de preguntas no reconocidas
+├── logo.png # Imagen enviada como bienvenida
+├── numeros.js # Números autorizados
+├── index.js # Lógica principal del bot
+├── package.json # Dependencias y configuración
+└── README.md # Este documento
+
+
+---
+
+## 🛠️ Arquitectura Técnica
+
+### Diagrama de Componentes
+
+```mermaid
+flowchart TB
+    subgraph WhatsApp
+        WAPI[WhatsApp Web API]
+    end
+
+    subgraph BotApp
+        BOT[Bot Principal - Node.js]
+        NLP[Procesamiento de Lenguaje Natural]
+        CORPUS[Corpus de Preguntas]
+        LOGS[desconocido.json]
+    end
+
+    Usuario --> WAPI
+    WAPI --> BOT
+    BOT --> NLP
+    NLP --> CORPUS
+    NLP --> BOT
+    BOT --> LOGS
+    BOT --> WAPI
+    WAPI --> Usuario
+
