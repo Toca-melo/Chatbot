@@ -1,28 +1,28 @@
-# 🎮 Chatbot Comercial con PLN: GameZoneBot
+# 🎮 GameZoneBot — Chatbot Comercial para WhatsApp
 
-**GameZoneBot** es un asistente virtual inteligente para WhatsApp que automatiza la atención al cliente de la tienda de videojuegos **GameZone**. Utiliza técnicas de procesamiento de lenguaje natural (PLN) para responder preguntas frecuentes, sugerir videojuegos, brindar información de horarios y promociones, y mucho más.
-
----
-
-## 🌟 Características Principales
-
-- *Respuestas inteligentes* usando similitud semántica
-- *Reconocimiento de lenguaje natural* con Jaro-Winkler
-- *Organización modular* del corpus en temas
-- *Registro de preguntas desconocidas* para entrenamiento futuro
-- *Envío automático de imagen de bienvenida*
-- *Ejecutado con WhatsApp Web sin APIs externas*
+**GameZoneBot** es un asistente virtual inteligente diseñado para automatizar la atención al cliente en la tienda de videojuegos **GameZone**. Utiliza técnicas de procesamiento de lenguaje natural (PLN) para comprender y responder de forma eficaz a las consultas de los usuarios.
 
 ---
 
-## 🔄 Flujo de Procesamiento
+## 🔧 Funcionalidades Destacadas
 
-1. **Recepción de mensaje** desde WhatsApp vía `whatsapp-web.js`
-2. **Preprocesamiento** del texto: limpieza, minúsculas, acentos
-3. **Comparación semántica** con corpus usando Jaro-Winkler (umbral ≥ 0.74)
-4. **Clasificación de intención**: diálogo, información o juegos
-5. **Generación de respuesta** con mensajes personalizados
-6. **Persistencia de preguntas desconocidas** en archivo local
+- 📌 **Respuestas semánticas** mediante similitud Jaro-Winkler  
+- 🧠 **Clasificación automática** de intenciones: diálogo, información, videojuegos  
+- 🗃️ **Corpus modular** categorizado temáticamente  
+- 🧾 **Registro de preguntas desconocidas** para entrenamiento futuro  
+- 🖼️ **Imagen de bienvenida** automática  
+- 💬 **Integración con WhatsApp Web** sin uso de APIs externas  
+
+---
+
+## 🔁 Proceso de Funcionamiento
+
+1. **Recepción del mensaje** desde WhatsApp vía `whatsapp-web.js`
+2. **Preprocesamiento** del texto: limpieza, conversión a minúsculas y normalización de acentos
+3. **Cálculo de similitud** semántica usando Jaro-Winkler (umbral ≥ 0.74)
+4. **Identificación de intención** (diálogo, información, juegos)
+5. **Generación de respuesta personalizada**
+6. **Registro automático** de preguntas no reconocidas en archivo local
 
 ---
 
