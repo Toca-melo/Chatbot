@@ -35,8 +35,8 @@ gamezone-bot/
 ├── logo.png # Imagen enviada como bienvenida
 ├── numeros.js # Números autorizados
 ├── index.js # Lógica principal del bot
-├── package.json # Dependencias y configuración
-└── README.md # Este documento
+├── package.json # Dependencias y configuración del proyecto
+└── README.md # Documentación del proyecto
 
 
 ---
