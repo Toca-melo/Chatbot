@@ -29,15 +29,18 @@
 # 📦 Estructura del Proyecto
 
 ```
-    gamezone-bot/
-    ├── corpus/
-    │   └── corpus.js          # Preguntas y respuestas organizadas
-    ├── desconocido.json       # Registro de preguntas no reconocidas
-    ├── logo.png               # Imagen enviada como bienvenida
-    ├── numeros.js             # Números autorizados
-    ├── index.js               # Lógica principal del bot
-    ├── package.json           # Dependencias y configuración del proyecto
-    └── README.md              # Documentación del proyecto
+   gamezone-bot/
+├── 📄 .DS_Store # Archivo de configuración de macOS (puede ignorarse)
+├── 📂 corpus/ # Directorio de intenciones/respuestas del bot
+│ └── 📄 corpus.js # Base de conocimiento con preguntas y respuestas organizadas
+├── 📄 desconocido.json # Registro de preguntas no reconocidas (para mejora continua)
+├── 📄 index.js # Lógica principal del bot
+├── 📄 logo.png # Imagen de bienvenida/identidad visual
+├── 📄 numeros.js # Lista de números autorizados (control de acceso)
+├── 📄 package.json # Configuración del proyecto y dependencias
+├── 📄 package-lock.json # Bloqueo de versiones de dependencias
+└── 📄 README.md # Documentación principal del proyecto
+
 ```
 
 
